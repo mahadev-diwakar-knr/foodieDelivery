@@ -149,20 +149,28 @@ img{
     font-weight: bold;
     color:var(--gold-finger-color);
 }
+
 .btn{
     display: inline-block;
     padding: .9rem 2rem;
-    background-color: var(--gold-finger-color);
     font-size: 1.1rem;
     border-radius: 1rem;
     color: var(--pure-withe);
+    background: linear-gradient(
+        135deg,
+        var(--gold-finger-color) 50%,
+        var(--lead) 50%
+    );
+    background-size: 220% 220%;
+    background-position: left bottom;
     box-shadow: rgba(58, 57, 57, 0.227) 0 2px 1px;
-    transition: 0.3s ease;
+    transition: background-position 0.4s ease;
 }
 
 .btn:hover{
-    background: var(--lead);
+    background-position: right top;
 }
+
 
 .cart-icon{
     font-size: 1.3rem;
@@ -342,12 +350,20 @@ h4{
 .arrow{
     width: 2.5rem;
     aspect-ratio: 1;
-    border-radius: 100vw;
-    background: var(--gold-finger-color);
-    color: var(--lead);
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid var(--gold-finger-color);
+    color: var(--gold-finger-color);
     text-align: center;
     line-height: 2.5rem;
+    transition: 0.35s ease;
 }
+
+.arrow:hover{
+    background: var(--gold-finger-color);
+    color: var(--lead);
+}
+
 
 /* SECTION mobile app section 4 */
 
